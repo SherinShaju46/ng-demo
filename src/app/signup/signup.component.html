@@ -10,7 +10,7 @@
    <div class="card-container">
 
     <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm">
-      <table  cellpadding="1" cellspacing="20px">
+    <table  cellpadding="1" cellspacing="20px">
       <tr><td><label for="fname">Name:</label></td>
         <td> <input type="text" id="fname" name="fname" formControlName="fname">
       <div class="err" *ngIf="submitted && f.fname.errors">

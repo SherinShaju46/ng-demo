@@ -34,7 +34,11 @@ export class LoginComponent implements OnInit {
     await this.firebaseService.login(email, password)
     if(this.firebaseService.isLoggedIn){
       this.isSignedIn = true;
-      this.router.navigate(['dashboard'])}
+      this.router.navigate(['dashboard'])
+      alert("Success");
+    }
+    else
+      alert("The password is invalid or the user does not have a password.");
   }
   routeSignup(){
     this.router.navigate(['signup']);
